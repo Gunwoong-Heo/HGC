@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="4-10.c">
+    <ClCompile Include="HonGong.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
