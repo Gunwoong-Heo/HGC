@@ -6,7 +6,7 @@
 .recipe
 .ilk
 debug/*
-*/Debug/*
+*/Debug/
 */*.sln
 
 
