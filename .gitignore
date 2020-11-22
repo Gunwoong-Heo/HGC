@@ -1,8 +1,9 @@
 .vs
 
-.vcxproj
-.vcxproj.*
+*.vcxproj
+*.vcxproj.*
 .sln
 .recipe
 .ilk
 debug/*
+
