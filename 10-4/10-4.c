@@ -9,6 +9,7 @@ int main(void)
 	printf("pa : %u\n", pa);
 	printf("pb : %u\n", pb);
 	pa++;                                  // pa를 다음 배열 요소로 이동
+
 	printf("pb - pa : %u\n", pb - pa);     // 두 포인터의 뺄셈
 
 	printf("앞에 있는 배열 요소의 값 출력 : ");
