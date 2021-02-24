@@ -1,23 +1,23 @@
 #include <stdio.h>
 
-//int main(void)
-//{
-//	int ary[3][4] = { {1,2,3,4}, {5,6,7,8}, {9,10,11,12} };
-//	int(*pa)[4];     // int형 변수 4개의 배열을 가리키는 배열 포인터
-//	int i, j;
-//
-//	pa = ary;
-//	for (i = 0; i < 3; i++)
-//	{
-//		for (j = 0; j < 4; j++)
-//		{
-//			printf("%5d", pa[i][j]);  // pa를 2차원 배열처럼 사용
-//		}
-//		printf("\n");
-//	}
-//
-//	return 0;
-//}
+int main(void)
+{
+	int ary[3][4] = { {1,2,3,4}, {5,6,7,8}, {9,10,11,12} };
+	int(*pa)[4];     // int형 변수 4개의 배열을 가리키는 배열 포인터
+	int i, j;
+
+	pa = ary;
+	for (i = 0; i < 3; i++)
+	{
+		for (j = 0; j < 4; j++)
+		{
+			printf("%5d", pa[i][j]);  // pa를 2차원 배열처럼 사용
+		}
+		printf("\n");
+	}
+
+	return 0;
+}
 
 //int main(void) 
 //{
@@ -118,36 +118,38 @@
 //}
 
 
-int main() {
-	int i, j;
-	int arr[3][4] = {
-		{1,2,3,4},
-		{5,6,7,8},
-		{9,10,11,12}
-	};
-	int(*pArr)[4] = arr;
-
-	printf("%p\n", arr);
-	printf("%d\n", sizeof(pArr[0])); // arr[0]의 사이즈 와 동일. 16
-	printf("%d\n", sizeof(arr[0])); 
-	printf("%d\n", sizeof(arr)); // arr의 사이즈 구하기. 3 x 4 x 4byte = 48
-	printf("%d\n", sizeof(pArr)); // int형 4개를 담는 배열을 가르킬 수 있는 단 하나의 포인터, 포인터 자체의 사이즈만 구하면 4가 나옴
-	printf("%d\n", sizeof(int)); // int 자체의 사이즈구하기. 4
-	printf("\n");
-
-	int row = sizeof(arr) / sizeof(arr[0]);  // 48/16 = 3
-	int col = sizeof(arr[0]) / sizeof(arr[0][0]); // 16/4 = 4
-	printf("%d\n", row); // 
-	printf("%d\n", col); // 
-	for (i = 0; i < row; i++) {
-		for (j = 0; j < col; j++)
-			printf("%d ", pArr[i][j]);
-		printf("\n");
-	}
-	for (i = 0; i < row; i++) {
-		for (j = 0; j < col; j++)
-			printf("%d ", arr[i][j]);
-		printf("\n");
-	}
-
-}
+//int main() 
+//{
+//	int i, j;
+//	int arr[3][4] = {
+//		{1,2,3,4},
+//		{5,6,7,8},
+//		{9,10,11,12}
+//	};
+//	int(*pArr)[4] = arr;
+//
+//	printf("%p\n", arr);
+//	printf("%p\n", pArr);
+//	printf("%d\n", sizeof(pArr[0])); // arr[0]의 사이즈 와 동일. 16
+//	printf("%d\n", sizeof(arr[0])); 
+//	printf("%d\n", sizeof(arr)); // arr의 사이즈 구하기. 3 x 4 x 4byte = 48
+//	printf("%d\n", sizeof(pArr)); // int형 4개를 담는 배열을 가르킬 수 있는 단 하나의 포인터, 포인터 자체의 사이즈만 구하면 4가 나옴
+//	printf("%d\n", sizeof(int)); // int 자체의 사이즈구하기. 4
+//	printf("\n");
+//
+//	int row = sizeof(arr) / sizeof(arr[0]);  // 48/16 = 3
+//	int col = sizeof(arr[0]) / sizeof(arr[0][0]); // 16/4 = 4
+//	printf("%d\n", row); // 
+//	printf("%d\n", col); // 
+//	for (i = 0; i < row; i++) {
+//		for (j = 0; j < col; j++)
+//			printf("%d ", pArr[i][j]);
+//		printf("\n");
+//	}
+//	for (i = 0; i < row; i++) {
+//		for (j = 0; j < col; j++)
+//			printf("%d ", arr[i][j]);
+//		printf("\n");
+//	}
+//
+//}
